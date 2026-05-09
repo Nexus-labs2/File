@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: just-for-her
+    runtime: static
+    staticPublishPath: .
+    buildCommand: echo "no build needed ✨"
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600
